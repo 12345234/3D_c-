@@ -16,7 +16,7 @@ void Start()
 }
 void MainGame()
 {
-	pl.PlayerEntry();//プレイヤーの描画、移動
+	pl.PlayerEntry();//プレイヤーの描画、操作
 }
 void DrawGround()
 {
