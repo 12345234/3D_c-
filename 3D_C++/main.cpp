@@ -10,10 +10,6 @@ const int WIDTH = 1920, HEIGHT = 1080;
 
 Player pl;
 
-void Start()
-{
-	
-}
 void MainGame()
 {
 	pl.PlayerEntry();//プレイヤーの描画、操作

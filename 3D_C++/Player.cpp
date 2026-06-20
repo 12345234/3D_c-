@@ -9,13 +9,13 @@ Player::Player()
 
 	cameraPos = VGet(
 		playerPos.x,
-		playerPos.y + 150.0f,
+		playerPos.y + 50.0f,
 		playerPos.z - 300.0f
 	);
 
 	sp = 5.0f;
-	jp = 100.0f;
-	gravity = 7.0f;
+	jp = 50.0f;
+	gravity = 3.0f;
 
 }
 InputManager playerinput;
@@ -36,7 +36,7 @@ void Player::PlayerEntry()
 	}
 
 
-	SetCameraPositionAndTarget_UpVecY(VGet(playerPos.x, playerPos.y, playerPos.z-300), VGet(playerPos.x,playerPos.y,playerPos.z));
+	SetCameraPositionAndTarget_UpVecY(cameraPos, VGet(playerPos.x,playerPos.y,playerPos.z));
 	DrawSphere3D(VGet(playerPos.x,playerPos.y,playerPos.z),50,32,GetColor(50,50,50),GetColor(30,30,30),TRUE);
 	
 	if (playerPos.y >= 50)
