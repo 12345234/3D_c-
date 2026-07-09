@@ -10,7 +10,10 @@ using namespace std;
 const int WIDTH = 1920, HEIGHT = 1080;
 
 Player pl;
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 void MainGame()
 {
 	pl.PlayerEntry();//プレイヤーの描画、操作
@@ -54,7 +57,6 @@ int APIENTRY WinMain(HINSTANCE hinstance,HINSTANCE hprevinstance,LPSTR lpcmdline
 		//screeflipまでの間に基本処理を書く
 		MainGame();
 		DrawGround();
-		DrawSphere3D(VGet(00.0f, 00.0f, 2000.0f), 100, 32, GetColor(0, 192, 255), GetColor(125, 255, 222), TRUE);
 		
 		
 

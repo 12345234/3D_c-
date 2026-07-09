@@ -1,13 +1,8 @@
 #pragma once
 #include"DxLib.h"
-class Player
-{
-private:
-	float sp;//プレイヤーの速度
-	float jp;//プレイヤーのジャンプパワー
-	float gravity;//プレイヤーの重力
 
-	bool isJump = true;//ジャンプ中かどうか
+namespace transform
+{
 	/// <summary>
 	/// プレイヤーの座標
 	/// </summary>
@@ -16,12 +11,33 @@ private:
 		float x, y, z;
 	};
 
-	Pos playerPos;
+	struct rot
+	{
+		float x, y, z;
+	};
+
+	struct  scale
+	{
+		float x, y, z;
+	};
+}
+class Player
+{
+private:
+	float sp;//プレイヤーの速度
+	float jp;//プレイヤーのジャンプパワー
+	float gravity;//プレイヤーの重力
+
+	bool isJump = true;//ジャンプ中かどうか
+
+	
+
+	transform :: Pos playerPos;
 
 	/// <summary>
 	/// カメラ座標
 	/// </summary>
-	VECTOR cameraPos;
+	int mouseX, mouseY;
 
 public:
 	Player();
